@@ -46,7 +46,7 @@ export class DataSnapshot {
    *
    * @return {*} JSON representation of the DataSnapshot contents, or null if empty.
    */
-  val(): unknown {
+  val<T>(): T {
     validateArgCount('DataSnapshot.val', 0, 0, arguments.length);
     return this.node_.val();
   }
